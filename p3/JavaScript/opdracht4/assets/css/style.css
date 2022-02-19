@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right, #d47782 , #8a2c51);
+    height: 100vh;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    
+}
+.cookie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#name{
+    width: 20px;
+}
+
+.counter{
+    margin: 0 auto;
+    width: 100px;
+    height:20px;
+    border: 1px solid black;
+    text-align: center;
+    margin-top:30px;
+
+}
