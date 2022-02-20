@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --primary-pink: #f32b52;
+}
+/* nav styling */
+nav ul {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  background-color: black;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+nav ul li {
+  padding: 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* grid setup for main content */
+main {
+  gap: 1rem;
+  display: grid;
+  max-width: 90%;
+  margin: 0 auto;
+  grid-template-areas:
+    "upper upper"
+    "latest sidebar"
+    "populair sidebar"
+    "relevant . ";
+}
+
+.upper {
+  grid-area: upper;
+}
+
+.latest {
+  grid-area: latest;
+  background-color: pink;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: red;
+}
+
+.populair {
+  grid-area: populair;
+  background-color: green;
+}
+
+.relevant {
+  grid-area: relevant;
+  background-color: purple;
+}
+
+/*styling upper content*/
+
+.upper {
+  gap: 1rem;
+  min-height: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.upper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upperFigure {
+  position: relative;
+  width: 100%;
+}
+
+.upperFigure .smallerbtn {
+  background-color: var(--primary-pink);
+  position: absolute;
+  top: 60%;
+  left: 10%;
+
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.big h2{
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  color: white;
+  font-size: x-large;
+}
+
+.big button{
+  background-color: var(--primary-pink);
+  position: absolute;
+  top: 80%;
+  left: 10%;
+
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.small h2 {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  color: white;
+}
+
+.upper {
+  border: 1px solid black;
+}
+
+.big {
+  border: 1px solid black;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+/*styling latest content*/
+.article-title {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.latest {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
+  gap: 1rem;
+}
+
+.article-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 70%;
+  height: 100%;
+}
+
+/* footer styling*/
+footer {
+  display: flex;
+  background-color: black;
+  max-width: 90%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+footer ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+}
