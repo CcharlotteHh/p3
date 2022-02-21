@@ -8,6 +8,26 @@
 :root {
   --primary-pink: #f32b52;
 }
+
+button {
+  background-color: var(--primary-pink);
+
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+article {
+  background-color: white;
+}
+
 /* nav styling */
 nav ul {
   display: flex;
@@ -26,9 +46,22 @@ nav ul li a {
   color: white;
 }
 
-
 /* grid setup for main content */
+/*@media (max-width: 600px) {
+  main{
+    display:grid;
+    grid-template-areas:
+    "upper upper"
+    "latest latest"
+    "populair sidebar sidebar"
+    "populair.populair"
+    'relevant relvevant';
+  }
+  
+}*/
+
 main {
+  background-color: #ecf0f1;
   gap: 1rem;
   display: grid;
   max-width: 90%;
@@ -46,17 +79,14 @@ main {
 
 .latest {
   grid-area: latest;
-  background-color: pink;
 }
 
 .sidebar {
   grid-area: sidebar;
-  background-color: red;
 }
 
 .populair {
   grid-area: populair;
-  background-color: green;
 }
 
 .relevant {
@@ -88,7 +118,7 @@ main {
   background-color: var(--primary-pink);
   position: absolute;
   top: 60%;
-  left: 10%;
+  left: 5%;
 
   color: white;
   border: none;
@@ -98,15 +128,15 @@ main {
   transition: 0.4s;
 }
 
-.big h2{
+.big h2 {
   position: absolute;
   top: 90%;
-  left: 10%;
+  left: 5%;
   color: white;
   font-size: x-large;
 }
 
-.big button{
+.big button {
   background-color: var(--primary-pink);
   position: absolute;
   top: 80%;
@@ -122,12 +152,8 @@ main {
 .small h2 {
   position: absolute;
   top: 80%;
-  left: 10%;
+  left: 5%;
   color: white;
-}
-
-.upper {
-  border: 1px solid black;
 }
 
 .big {
@@ -137,24 +163,130 @@ main {
 }
 
 /*styling latest content*/
-.article-title {
+
+.textAbove {
   background-color: black;
   color: white;
-  width: 100%;
-  text-align: center;
 }
 
 .latest {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(1fr));
   gap: 1rem;
 }
 
-.article-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 70%;
+.latest article {
+  display: flex;
+  width: 100%;
+}
+
+.latest h3 {
+  margin-top: 90px;
+  margin-bottom: 80px;
+  font-weight: bold;
+}
+
+.article-image {
+  position: relative;
+}
+
+.article-image button {
+  background-color: var(--primary-pink);
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+/*sidebar styling*/
+
+aside {
+  gap: 1rem;
+}
+
+.sidebar h3 {
+  margin-bottom: 5px;
+}
+
+.sidebar-card{
+  margin-bottom:10px;
+}
+
+.sidebar-card img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.macaron{
+  margin-bottom: 10px;
+}
+.macaron{
+  display: flex;
+  position: relative;
+}
+
+.macaron-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.macaron-image button{
+  position: absolute;
+  top:80%;
+  left:5%;
+}
+/*populair styling*/
+
+.populair {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.populairItem {
+  position: relative;
+}
+.populairItem button {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+}
+
+.populairItem h2 {
+  position: absolute;
+  color: white;
+  top: 90%;
+  left: 5%;
+}
+
+.populairItem h3 {
+  margin-bottom: 5px;
+}
+
+.populairItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.populairItem {
+  width: 48%;
+  margin-bottom: 2%;
+}
+
+.populair-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.populairItem:nth-child(1) {
+  width: 100%;
 }
 
 /* footer styling*/
@@ -173,4 +305,5 @@ footer ul {
 
 footer ul li a {
   text-decoration: none;
+  color: white;
 }
