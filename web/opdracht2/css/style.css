@@ -70,7 +70,7 @@ main {
     "upper upper"
     "latest sidebar"
     "populair sidebar"
-    "relevant . ";
+    " relevant socials ";
 }
 
 .upper {
@@ -91,7 +91,11 @@ main {
 
 .relevant {
   grid-area: relevant;
-  background-color: purple;
+}
+
+.socials {
+  gap: 0 rem;
+  grid-area: socials;
 }
 
 /*styling upper content*/
@@ -213,8 +217,8 @@ aside {
   margin-bottom: 5px;
 }
 
-.sidebar-card{
-  margin-bottom:10px;
+.sidebar-card {
+  margin-bottom: 10px;
 }
 
 .sidebar-card img {
@@ -223,23 +227,94 @@ aside {
   object-fit: cover;
 }
 
-.macaron{
+.sidebarAbove {
   margin-bottom: 10px;
 }
-.macaron{
+
+.macaron {
+  margin-bottom: 10px;
+}
+.macaron {
   display: flex;
   position: relative;
 }
 
-.macaron-image img{
+.macaron-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.macaron-image button{
+.macaron-image button {
   position: absolute;
-  top:80%;
-  left:5%;
+  top: 80%;
+  left: 5%;
+}
+
+.news-letter {
+  width: 100%;
+  border: 1px solid black;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.news-letter h3 {
+  color: white;
+  background-color: black;
+  margin-bottom: 20px;
+}
+
+.newsletter-textpart {
+  margin: 10px;
+}
+.newsletter-textpart p {
+  margin-bottom: 10px;
+}
+.newsletterinput {
+  width: 100%;
+  border: 5px solid var(--primary-pink);
+  padding: 10px;
+  margin: 10px 0px 10px;
+}
+
+.news-letter button {
+  margin-left: 40%;
+  margin-bottom: 10px;
+}
+
+/*socials styling*/
+.socials li {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-top: 1px solid black;
+}
+
+.socials li i {
+  margin: 10px 10px;
+}
+
+.socials li a {
+  margin-left: 25%;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: #4b63a1;
+}
+
+.twitter {
+  background-color: #69c8fe;
+}
+.youtube {
+  background-color: #c41713;
+}
+
+.wifi {
+  background-color: #f17400;
 }
 /*populair styling*/
 
@@ -287,6 +362,12 @@ aside {
 
 .populairItem:nth-child(1) {
   width: 100%;
+}
+
+.relevant {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* footer styling*/
