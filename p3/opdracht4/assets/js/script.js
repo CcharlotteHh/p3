@@ -13,15 +13,11 @@ console.log(playerName);
 //scoreDiv.innerHTML = score;
 document.getElementById("counterContainer").appendChild(scoreDiv);
 
-audioObj1 = new Audio("assets/audio/click.mp3"); //creates audio element
-audioObj2 = new Audio("assets/audio/cookieUp.mp3");
+//creates audio element
+audioObj = new Audio("assets/audio/cookieUp.mp3");
 
-function playAudio1() {
-  audioObj1.play(); //function that plays the created audio element
-}
-
-function playAudio2() {
-  audioObj2.play(); //function that plays the created audio element
+function playAudio() {
+  audioObj.play(); //function that plays the created audio element
 }
 
 let newCookieContainer = document.querySelector(".newCookieContainer"); //container for newCookie when cookie is clicked 10 times
@@ -56,16 +52,13 @@ function mouseHoverBtnout(){
 function resetScore(){ //resets score back to zero
   score = 0;
   scoreDiv.innerHTML = score;
+  newCookieContainer.innerHTML = "";//removes all cookies from cookiecontainer when reset button is clicked
 }
-
-
-
 
 cookie.addEventListener("click", function () {
   score++; // ups score by one when cookie is clicked
   scoreDiv.innerHTML = score; //score inside scorecounter
   console.log(score);
-  playAudio1();
   addCookie(); // addCookie function is called
 });
 
@@ -75,9 +68,8 @@ function addCookie() {
     let newCookie = document.createElement("img"); // creates newCookie img element
     newCookie.src = "assets/img/smallcookie.png"; // gives source to newCookie element
     newCookie.style.width = "50px"; // width of newCookie
-    newCookie.style.height = "50px";
-    newCookieContainer.appendChild(newCookie);
-    console.log("score = 10");
-    playAudio2();
+    newCookie.style.height = "50px"; // height of newCookie
+    newCookieContainer.appendChild(newCookie);//appends newCookie in newCookieContainer
+    playAudio();
   }
 }

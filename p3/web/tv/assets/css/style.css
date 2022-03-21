@@ -1,0 +1,90 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color:#f8d76e;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    height:500px;
+    width: 600px;
+
+  
+}
+
+.tv{
+    background-color: #ed5650;
+    height:400px;
+    width: 540px;
+    position: relative;
+    top: 200px;
+    left: 90px;
+    border-radius:15px;
+}
+
+.play{
+    background-color: #01c901;
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    position:absolute;
+    bottom:20px;
+    right: 15px;
+}
+
+.slot{
+    background-color:#d52f31;
+    height: 20px;
+    width:50%;
+    border-radius:8px;
+    position: absolute;
+    bottom:40px;
+    left: 25%;
+}
+
+.video_container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:40px;   
+}
+
+video{
+    
+    width: 90%;
+    border-radius:15px;
+}
+
+
+.antenna{
+    background-color: #3d3f3d;
+    height: 20px;
+    width: 60px;
+    border-radius:20px 20px 0 0;
+    position: absolute;
+    top: -20px;
+    left: 50px;
+}
+
+.a{
+    background-color: #3d3f3d;
+    height: 70px;
+    width:6px;
+    border-radius:6px;
+    position: relative;
+
+}
+
+.a:nth-child(1){
+    bottom:60px;
+    left: 10px;
+    transform: rotate(-30deg);
+}
+
+.a:nth-child(2){
+    bottom:130px;
+    left: 45px;
+    transform: rotate(30deg);
+}
