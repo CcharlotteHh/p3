@@ -46,19 +46,7 @@ nav ul li a {
   color: white;
 }
 
-/* grid setup for main content */
-/*@media (max-width: 600px) {
-  main{
-    display:grid;
-    grid-template-areas:
-    "upper upper"
-    "latest latest"
-    "populair sidebar sidebar"
-    "populair.populair"
-    'relevant relvevant';
-  }
-  
-}*/
+
 
 main {
   background-color: #ecf0f1;
@@ -368,6 +356,23 @@ aside {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex h3 {
+  margin-top: 90px;
+  margin-bottom: 80px;
+  font-weight: bold;
 }
 
 /* footer styling*/
